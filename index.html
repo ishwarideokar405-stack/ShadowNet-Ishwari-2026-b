@@ -1,1 +1,44 @@
-index.html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ShadowNet</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="phone">
+  <h1>ShadowNet</h1>
+  <p id="network">Checking network...</p>
+
+  <button id="sos" onclick="sosAlert()">SOS</button>
+
+  <div class="grid">
+    <div class="card" onclick="openChat()">💬 Offline Chat</div>
+    <div class="card" onclick="openMap()">🗺 Safe Route</div>
+    <div class="card">📞 Police: 100</div>
+    <div class="card">🚑 Ambulance: 108</div>
+  </div>
+</div>
+
+<div id="chat" class="screen">
+  <h2>Offline Chat</h2>
+  <div id="messages"></div>
+  <input id="msg" placeholder="Type message">
+  <button onclick="sendMsg()">Send</button>
+  <button onclick="backHome()">Back</button>
+</div>
+
+<div id="map" class="screen">
+  <h2>Safe Route</h2>
+  <p>📍 Police Station</p>
+  <p>📍 Hospital</p>
+  <p>📍 Shelter</p>
+  <button onclick="backHome()">Back</button>
+</div>
+
+<script src="script.js"></script>
+
+</body>
+</html>
